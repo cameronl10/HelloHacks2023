@@ -84,7 +84,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 60vw;
     color: #1B1D21;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Poppins;
@@ -95,4 +95,11 @@
     text-align: left;
     display: inline-block;
     margin: 20px;
+}
+
+.dashboard .navbar .profile {
+    width: 10vw;
+    border-radius: 10px;
+    background-color: #1B1D21;
+    margin: 0px 20px;
 }

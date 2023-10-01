@@ -5,15 +5,14 @@ import {useNavigate} from "react-router-dom"
 const StartMenu = () => {
     const navigate = useNavigate();
     const [dbData,setdbData] = useState([{}])
-    const [usernameData,setUsernameData] = useState(["hello"])
+    const [usernameData,setUsernameData] = useState([])
     useEffect(() =>{
         fetch("http://localhost:3001/users" , {method: "GET"}).then(
             response => response.json()
         ).then(
             data => {
                 setdbData(data);
-                console.log(data[0]);
-                setUsernameData([dbData.map(obj=>obj.email)][0])
+                setUsernameData(data.map(entry => entry.email));
                 console.log(usernameData);
             }
         )
@@ -26,7 +25,7 @@ const StartMenu = () => {
         e.preventDefault();
         console.log(usernameData);
        {
-        (usernameData.includes(state.email)) ? navigate('/pages/Dashboard.js') : alert("user does not exists");
+        (usernameData.includes(state.email)) ? navigate('/Dashboard') : alert("user does not exists");
        }
     };
     const handleChange = e => {

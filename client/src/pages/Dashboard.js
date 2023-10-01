@@ -68,10 +68,10 @@ const SignUp = () => {
                 <img src/>
                 <div className='names'>
                     <h4>
-                        
+                        {name}
                     </h4>
                     <h5>
-                    <h1>{name}</h1>
+                    <h1>{email}</h1>
                     </h5>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -81,6 +81,9 @@ const SignUp = () => {
             </div>
 
             <div className='content'>
+                <div className='soon'>
+
+                </div>
             </div>
         </div>
     </div>

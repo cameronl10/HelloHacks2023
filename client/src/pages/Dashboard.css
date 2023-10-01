@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     width: 84vw;
-    background-color: wheat;
+    background-color: #e9e9e9;
 }
 
 .dashboard .bottom-task .divider {
@@ -98,10 +98,26 @@
 }
 
 .dashboard .navbar .profile {
-    width: 10vw;
+    width: 13vw;
     border-radius: 10px;
     background-color: #d9d9d9;
     margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dashboard .profile img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.dashboard .navbar .names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dashboard .navbar .profile h5 {
@@ -112,4 +128,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 19.444px; /* 166.667% */
+}
+
+.dashboard .navbar .profile img {
+
 }

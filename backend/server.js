@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
-mongoose.connect('mongodb+srv://cameronblazes:fDlyRT8Ba1hzhMhf@cluster0.gnwaffd.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true
 });
 const db = mongoose.connection;

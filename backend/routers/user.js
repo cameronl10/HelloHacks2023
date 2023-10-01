@@ -13,8 +13,9 @@ router.get('/',async (req,res) => {
     }
 })
 
-router.get('/:id',(req,res) => {
-
+router.get('/:id',async (req,res) => {
+    const user = await User.find(params.body.id);
+    res.status(200).json(user);
 })
 router.post('/',async (req,res) => {
     const user = new User({

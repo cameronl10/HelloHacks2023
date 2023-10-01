@@ -22,7 +22,7 @@ const SignUp = () => {
         console.log(responseText);
     });
 
-    navigate('/Dashboard',{state:{name:"nicholas",email:state.email}});
+    navigate('/Dashboard',{state:{name:"Nicholas",email:state.email}});
     };
 
     const handleChange = e => {

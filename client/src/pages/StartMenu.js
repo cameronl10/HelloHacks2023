@@ -25,7 +25,7 @@ const StartMenu = () => {
         e.preventDefault();
         console.log(usernameData);
        {
-        (usernameData.includes(state.email)) ? navigate('/Dashboard',{state: {email:state.email}}) : alert("user does not exists");
+        (usernameData.includes(state.email)) ? navigate('/Dashboard',{state: {email:state.email, name: "Cameron"}}) : alert("user does not exists");
        }
     };
     const handleChange = e => {

@@ -1,19 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Mulish:wght@600&family=Open+Sans:ital,wght@1,700;1,800&display=swap');
 
 .item-container {
-    width: 100%;
+    width: 80%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
-    margin: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    align-items: center;
+    margin: 1vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-right: 3vh;
+    padding: 0;
+    border-radius: 8px;
+    transition: background-color 0.5s;
 }
 
-.item-container img {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
+.item-container:hover {
+    background-color: rgba(217, 217, 217, 0.1);
 }
+
+.item-container a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+svg {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+}
+
+
 
 .item-container h2 {
     color: var(--text-white-100, #FFF);
@@ -23,5 +42,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 19.444px; /* 166.667% */
+    text-decoration: none;
 }
 

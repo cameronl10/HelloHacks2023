@@ -1,8 +1,10 @@
 import React from 'react';
 import TaskbarItem from './components/TaskbarItem';
 import './Dashboard.css';
-
+import {useLocation, useNavigate, useNavigation} from 'react-router-dom'
 const SignUp = () => {
+    const {state} = useLocation();
+    const{email} = state;
     return(
     <div className = "dashboard">
         <div className='taskbar'>
@@ -68,7 +70,7 @@ const SignUp = () => {
                         
                     </h4>
                     <h5>
-
+                    <h1>{email}</h1>
                     </h5>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

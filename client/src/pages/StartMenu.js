@@ -1,14 +1,20 @@
 import React from 'react';
 import './StartMenu.css';
 import {useState, useEffect} from 'react';
+import {useNavigate} from "react-router-dom"
 const StartMenu = () => {
+    const navigate = useNavigate();
     const [dbData,setdbData] = useState([{}])
+    const [usernameData,setUsernameData] = useState(["hello"])
     useEffect(() =>{
         fetch("http://localhost:3001/users" , {method: "GET"}).then(
             response => response.json()
         ).then(
             data => {
                 setdbData(data);
+                console.log(data[0]);
+                setUsernameData([dbData.map(obj=>obj.email)][0])
+                console.log(usernameData);
             }
         )
     }, [])
@@ -18,7 +24,10 @@ const StartMenu = () => {
     const [state, setState] = useState({ email: "", password: "" });
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(dbData);
+        console.log(usernameData);
+       {
+        (usernameData.includes(state.email)) ? navigate('/pages/Dashboard.js') : alert("user does not exists");
+       }
     };
     const handleChange = e => {
         setState({

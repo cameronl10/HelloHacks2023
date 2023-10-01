@@ -1,14 +1,15 @@
 import React from 'react';
 import './SignUp.css';
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
-
+    const navigate = useNavigate();
     const [state, setState] = useState({ email: "", password: "", confirm: "" });
 
     const handleClick = e => {
         e.preventDefault();
         const data ={
-            "name": state.email,
+            "name": "nicholas",
             "email": state.email
         }
         fetch("http://localhost:3001/users", {method: 'POST' ,
@@ -20,6 +21,8 @@ const SignUp = () => {
     .then((responseText) => {
         console.log(responseText);
     });
+
+    navigate('/Dashboard',{state:{name:"nicholas",email:state.email}});
     };
 
     const handleChange = e => {

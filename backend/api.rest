@@ -6,7 +6,7 @@ POST http://localhost:3001/users
 Content-Type: application/json 
 
 {
-    "name": "Nick Zhang",
-    "email": "nickzhang3333@gmail.com",
-    "elo": 500
+    "name": "Jamie",
+    "email": "jamiekim88@gmail.com",
+    "elo": 2
 }

@@ -1,12 +1,25 @@
 import React from 'react';
 import './SignUp.css';
-
+import {useState} from 'react';
 const SignUp = () => {
 
-    const [state, setState] = React.useState({ email: "", password: "", confirm: "" });
-    const handleSubmit = e => {
+    const [state, setState] = useState({ email: "", password: "", confirm: "" });
+
+    const handleClick = e => {
         e.preventDefault();
-        console.log(state);
+        const data ={
+            "name": state.email,
+            "email": state.email
+        }
+        fetch("http://localhost:3001/users", {method: 'POST' ,
+        headers:{
+            'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify(data),
+    }).then((response => response.text()))
+    .then((responseText) => {
+        console.log(responseText);
+    });
     };
 
     const handleChange = e => {
@@ -36,7 +49,7 @@ const SignUp = () => {
                     <input type="password" name="password" onChange={handleChange}/>
                     <p className='subtitle'>CONFIRM PASSWORD</p>
                     <input type="password" name="confirm" onChange={handleChange}/>
-                    <input id="login" type="submit" value="Sign Up" onChange={handleSubmit}/>
+                    <input id="login" type="submit" value="Sign Up" onClick={handleClick}/>
                 </form>
             </div>
 

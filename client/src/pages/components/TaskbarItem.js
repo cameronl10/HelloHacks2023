@@ -5,10 +5,12 @@ function TaskbarItem(props) {
     return (
         <div class="item-container">
             <a href={props.link}>
-            <img src={props.img} alt="graphic"/>
-            <h2>
-                {props.name}
-            </h2>
+                <div className="img-box">{props.img}</div>
+                <div className="bar-title">
+                <h2>
+                    {props.name}
+                </h2>
+                </div>
             </a>
         </div>
     );

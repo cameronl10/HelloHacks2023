@@ -1,7 +1,20 @@
-import react from 'react';
+import React from 'react';
 import './StartMenu.css';
 
-const StartMenu = () =>{
+const StartMenu = () => {
+    const [state, setState] = React.useState({ email: "", password: "" });
+    const handleSubmit = e => {
+        e.preventDefault();
+        console.log(state);
+    };
+    const handleChange = e => {
+        setState({
+        ...state,
+        [e.target.name]: e.target.value
+        });
+    };
+
+
     return(
     <div className = "login">
         
@@ -10,20 +23,19 @@ const StartMenu = () =>{
 
 
             <div className = "headerbox">
-                <img src={require('./images/logo.png')} />
+                <img src={require('./images/logo.png')} alt='logo'/>
                 <h3>Cramly</h3>
                 <h2>Login to Cramly</h2>
             </div>
 
             <div className = "userInput">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <p className='subtitle'>EMAIL</p>
-                    <input type="text"/>
+                    <input type="text" name="email" onChange={handleChange}/>
                     <p className='subtitle'>PASSWORD</p>
-                    <input type="password"/>
+                    <input type="password" name="password" onChange={handleChange}/>
+                    <input id="login" type="submit" value="Log In" onChange={handleSubmit}/>
                 </form>
-
-                <button id="login">Login</button>
             </div>
 
             <div className = "footer">

@@ -1,7 +1,21 @@
-import react from 'react';
+import React from 'react';
 import './SignUp.css';
 
-const StartMenu = () =>{
+const SignUp = () => {
+
+    const [state, setState] = React.useState({ email: "", password: "", confirm: "" });
+    const handleSubmit = e => {
+        e.preventDefault();
+        console.log(state);
+    };
+
+    const handleChange = e => {
+        setState({
+        ...state,
+        [e.target.name]: e.target.value
+        });
+    };
+
     return(
     <div className = "sign-up-box">
         
@@ -18,14 +32,13 @@ const StartMenu = () =>{
             <div className = "userInput">
                 <form>
                     <p className='subtitle'>EMAIL</p>
-                    <input type="text"/>
+                    <input type="text" name="email" onChange={handleChange}/>
                     <p className='subtitle'>PASSWORD</p>
-                    <input type="password"/>
+                    <input type="password" name="password" onChange={handleChange}/>
                     <p className='subtitle'>CONFIRM PASSWORD</p>
-                    <input type="password"/>
+                    <input type="password" name="confirm" onChange={handleChange}/>
+                    <input id="login" type="submit" value="Sign Up" onChange={handleSubmit}/>
                 </form>
-
-                <button id="login">Sign Up</button>
             </div>
 
             <div className = "footer">
@@ -37,4 +50,4 @@ const StartMenu = () =>{
     );
 }
 
-export default StartMenu;
+export default SignUp;

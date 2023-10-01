@@ -1,11 +1,24 @@
 import React from 'react';
 import './StartMenu.css';
-
+import {useState, useEffect} from 'react';
 const StartMenu = () => {
-    const [state, setState] = React.useState({ email: "", password: "" });
+    const [dbData,setdbData] = useState([{}])
+    useEffect(() =>{
+        fetch("http://localhost:3001/users" , {method: "GET"}).then(
+            response => response.json()
+        ).then(
+            data => {
+                setdbData(data);
+            }
+        )
+    }, [])
+
+
+
+    const [state, setState] = useState({ email: "", password: "" });
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(state);
+        console.log(dbData);
     };
     const handleChange = e => {
         setState({
@@ -13,6 +26,7 @@ const StartMenu = () => {
         [e.target.name]: e.target.value
         });
     };
+
 
 
     return(

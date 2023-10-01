@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
 }
-.taskbar {
+.dashboard .taskbar {
     display: flex;
     flex-direction: column;
     width: 16vw;
@@ -14,12 +14,12 @@
     align-items: center;
     background: var(--Purple-gradient, linear-gradient(180deg, #4F4186 4.04%, #43215A 47.57%, #4B0847 107.17%, #826041 122.19%));
 }
-.contentbox {
+.dashboard .contentbox {
     width: 100%;
     padding: 0;
     margin: 1vw;
 }
-.top-task a {
+.dashboard .top-task a {
     margin: 2px;
     align-items: left;
     padding: 0;
@@ -27,24 +27,25 @@
     transition: 0.5s background-color;
 }
 
-.top-task a :hover{
+.dashboard .top-task a :hover{
     background-color: #3F3176;
 }
-.top-task img {
+
+.dashboard .top-task img {
     width: 60%;
     height: auto;
     margin-left: 15px;
 }
 
 
-.display-board {
+.dashboard .display-board {
     display: flex;
     flex-direction: column;
     width: 84vw;
     background-color: wheat;
 }
 
-.bottom-task .divider {
+.dashboard .bottom-task .divider {
     display: flex;
     width: 210px;
     padding: 7.778px 0px;
@@ -57,7 +58,7 @@
     padding: 0.1vh;
 }
 
-.navbar {
+.dashboard .navbar {
     display: flex;
     flex-direction: row;
     background-color: #FFFFFF;
@@ -67,7 +68,7 @@
     justify-content: center;
 }
 
-.navbar svg {
+.dashboard .navbar svg {
     width: 3.5%;
     height: auto;
     margin: 20px;
@@ -75,11 +76,11 @@
     transition: 0.5s background-color;
 }
 
-.navbar svg:hover {
+.dashboard .navbar svg:hover {
     background-color: #D9d9d9;
 }
 
-.navbar .nav-title {
+.dashboard .navbar .nav-title {
     align-items: center;
     display: flex;
     flex-direction: column;

@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-svg {
+.item-container svg {
     display: flex;
     flex-direction: row;
     margin: 10px 20px;

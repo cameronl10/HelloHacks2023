@@ -1,18 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Sidebar from './Sidebar';
+import Login from './pages/StartMenu.js'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <div className = "topBar">
-        
-      </div>
-      <div class="sideBar">
-      <Sidebar/>
-      </div>
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login/>}/>
+        <Route path="/signup/" element={<Login/>}/>
+      </Routes>
+    </Router>
   );
 }
 

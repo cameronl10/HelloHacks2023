@@ -39,11 +39,9 @@
 }
 
 .login .headerbox img {
-  margin: 1vh;
+  margin: 0.5vh;
   padding: 0;
-  width: 7vh;
-  height: 7vh;
-  border-radius: 50%;
+  width: 13vh;
 }
 
 .login .headerbox h3 {
@@ -139,7 +137,7 @@
 }
 
 .login .footer{
-  margin-top: 3vh;
+  margin-top: 2vh;
   width: 100%;
 }
 

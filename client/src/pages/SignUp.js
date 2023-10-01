@@ -24,8 +24,7 @@ const SignUp = () => {
 
 
             <div className = "headerbox">
-            <img src={require('./images/logo.png')} />
-                <h3>Cramly</h3>
+            <img src={require('./images/logo.png')} alt='logo' />
                 <h2>Sign Up</h2>
             </div>
 

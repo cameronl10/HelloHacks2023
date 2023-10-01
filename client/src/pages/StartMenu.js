@@ -24,7 +24,6 @@ const StartMenu = () => {
 
             <div className = "headerbox">
                 <img src={require('./images/logo.png')} alt='logo'/>
-                <h3>Cramly</h3>
                 <h2>Login to Cramly</h2>
             </div>
 

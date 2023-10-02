@@ -2,6 +2,7 @@ const express = require ('express');
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
+require('dotenv').config();
 
 mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true
